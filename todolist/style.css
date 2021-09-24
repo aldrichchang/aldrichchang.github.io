@@ -1,0 +1,112 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    min-width: 300px;
+}
+
+.the-header {
+    background-color: rgb(39, 39, 182);
+    padding: 30px 42px;
+    color: cornsilk;
+    text-align: center;
+}
+
+.the-header::after {
+    content:'' ;
+    display: table;
+    clear: both;
+}
+
+#the-input {
+    width: 70%;
+    padding: 10px;
+    float: left;
+    margin: 0;
+    border: none;
+    border-radius: 0;
+    font-size: 15px;
+}
+
+.create-button {
+    padding: 10px;
+    background-color: cyan;
+    font-size: 15px;
+    width: 30%;
+    color: darkcyan;
+    float: left;
+    text-align: center;
+    cursor:pointer;
+    border-radius: 0px;
+    -webkit-transition: 0.4s;
+    -moz-transition: 0.4s;
+    -ms-scroll-translation: 0.4s;
+    -o-transition: 0.4s;
+    transition: 0.4s;
+}
+
+.create-button:hover {
+    background-color: dodgerblue;
+    color: greenyellow;
+}
+
+ul{
+    padding: 0;
+    margin: 0;
+}
+
+ul li{
+    position: relative;
+    background-color: lightgrey;
+    list-style-type: none;
+    padding: 10px 6px 10px 30px;
+    cursor: pointer;
+    transition: 0.3s;
+    /*Make List Un-selectable */
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+
+ul li:nth-child(odd){
+    background-color: cyan;
+    color: darkgray;
+}
+
+ul li:hover{
+    background-color: darkgray;
+    color: cyan;
+}
+
+ul li.checked{
+    color: azure;
+    background: black;
+    text-decoration: line-through;
+}
+
+ul li.checked::before {
+    content: '';
+    position: absolute;
+    border-color: white;
+    border-style: solid;
+    border-width: 0 2px 2px 0;
+    top: 10px;
+    left: 15px;
+    transform: rotate(45deg);
+    height: 15px;
+    width: 10px;
+}
+
+.close {
+    position: absolute;
+    right: 0;
+    top: 0;
+    padding: 10px 15px;
+}
+
+.close:hover {
+    background: #f43cf4;
+}
